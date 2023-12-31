@@ -20,7 +20,7 @@ const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
   id: "exampleId",
-  lineTotal: "exampleLineTotal",
+  lineTotal: 42.42,
   quantity: 42,
   unitPrice: 42.42,
   updatedAt: new Date(),
@@ -28,7 +28,7 @@ const CREATE_INPUT = {
 const CREATE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
-  lineTotal: "exampleLineTotal",
+  lineTotal: 42.42,
   quantity: 42,
   unitPrice: 42.42,
   updatedAt: new Date(),
@@ -37,7 +37,7 @@ const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
     id: "exampleId",
-    lineTotal: "exampleLineTotal",
+    lineTotal: 42.42,
     quantity: 42,
     unitPrice: 42.42,
     updatedAt: new Date(),
@@ -46,7 +46,7 @@ const FIND_MANY_RESULT = [
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
-  lineTotal: "exampleLineTotal",
+  lineTotal: 42.42,
   quantity: 42,
   unitPrice: 42.42,
   updatedAt: new Date(),

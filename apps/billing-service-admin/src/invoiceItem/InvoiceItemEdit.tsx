@@ -1,15 +1,12 @@
 import * as React from "react";
-
 import {
   Edit,
   SimpleForm,
   EditProps,
   ReferenceInput,
   SelectInput,
-  TextInput,
   NumberInput,
 } from "react-admin";
-
 import { InvoiceTitle } from "../invoice/InvoiceTitle";
 import { ProductTitle } from "../product/ProductTitle";
 
@@ -24,7 +21,7 @@ export const InvoiceItemEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectInput optionText={InvoiceTitle} />
         </ReferenceInput>
-        <TextInput label="Line Total" source="lineTotal" />
+        <NumberInput label="Line Total" source="lineTotal" />
         <ReferenceInput
           source="productId.id"
           reference="Product"

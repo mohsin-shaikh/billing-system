@@ -5,7 +5,7 @@ export type InvoiceItem = {
   createdAt: Date;
   id: string;
   invoiceId?: Invoice | null;
-  lineTotal: string | null;
+  lineTotal: number | null;
   productId?: Product | null;
   quantity: number | null;
   unitPrice: number | null;

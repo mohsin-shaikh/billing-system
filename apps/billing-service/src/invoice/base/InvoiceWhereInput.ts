@@ -88,7 +88,7 @@ class InvoiceWhereInput {
   @Field(() => EnumInvoiceStatus, {
     nullable: true,
   })
-  status?: "paid" | "unpaid" | "pending";
+  status?: "Paid" | "Unpaid" | "Pending";
 
   @ApiProperty({
     required: false,

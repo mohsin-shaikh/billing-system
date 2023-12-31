@@ -12,13 +12,7 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { InvoiceWhereUniqueInput } from "../../invoice/base/InvoiceWhereUniqueInput";
-import {
-  ValidateNested,
-  IsOptional,
-  IsString,
-  IsInt,
-  IsNumber,
-} from "class-validator";
+import { ValidateNested, IsOptional, IsNumber, IsInt } from "class-validator";
 import { Type } from "class-transformer";
 import { ProductWhereUniqueInput } from "../../product/base/ProductWhereUniqueInput";
 
@@ -38,14 +32,14 @@ class InvoiceItemUpdateInput {
 
   @ApiProperty({
     required: false,
-    type: String,
+    type: Number,
   })
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => Number, {
     nullable: true,
   })
-  lineTotal?: string | null;
+  lineTotal?: number | null;
 
   @ApiProperty({
     required: false,

@@ -12,9 +12,9 @@ https://docs.amplication.com/how-to/custom-code
 import { registerEnumType } from "@nestjs/graphql";
 
 export enum EnumInvoiceStatus {
-  Paid = "paid",
-  Unpaid = "unpaid",
-  Pending = "pending",
+  Paid = "Paid",
+  Unpaid = "Unpaid",
+  Pending = "Pending",
 }
 
 registerEnumType(EnumInvoiceStatus, {

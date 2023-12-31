@@ -1,14 +1,13 @@
 import { StringFilter } from "../../util/StringFilter";
 import { InvoiceWhereUniqueInput } from "../invoice/InvoiceWhereUniqueInput";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { ProductWhereUniqueInput } from "../product/ProductWhereUniqueInput";
 import { IntNullableFilter } from "../../util/IntNullableFilter";
-import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 
 export type InvoiceItemWhereInput = {
   id?: StringFilter;
   invoiceId?: InvoiceWhereUniqueInput;
-  lineTotal?: StringNullableFilter;
+  lineTotal?: FloatNullableFilter;
   productId?: ProductWhereUniqueInput;
   quantity?: IntNullableFilter;
   unitPrice?: FloatNullableFilter;

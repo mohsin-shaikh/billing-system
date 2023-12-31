@@ -10,6 +10,6 @@ export type InvoiceWhereInput = {
   id?: StringFilter;
   invoiceDate?: DateTimeNullableFilter;
   invoiceItems?: InvoiceItemListRelationFilter;
-  status?: "paid" | "unpaid" | "pending";
+  status?: "Paid" | "Unpaid" | "Pending";
   totalAmount?: StringNullableFilter;
 };

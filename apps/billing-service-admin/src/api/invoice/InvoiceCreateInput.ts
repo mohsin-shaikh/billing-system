@@ -6,6 +6,6 @@ export type InvoiceCreateInput = {
   dueDate?: Date | null;
   invoiceDate?: Date | null;
   invoiceItems?: InvoiceItemCreateNestedManyWithoutInvoicesInput;
-  status?: "paid" | "unpaid" | "pending" | null;
+  status?: "Paid" | "Unpaid" | "Pending" | null;
   totalAmount?: string | null;
 };

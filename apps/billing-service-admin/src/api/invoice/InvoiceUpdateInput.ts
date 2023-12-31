@@ -6,6 +6,6 @@ export type InvoiceUpdateInput = {
   dueDate?: Date | null;
   invoiceDate?: Date | null;
   invoiceItems?: InvoiceItemUpdateManyWithoutInvoicesInput;
-  status?: "paid" | "unpaid" | "pending" | null;
+  status?: "Paid" | "Unpaid" | "Pending" | null;
   totalAmount?: string | null;
 };

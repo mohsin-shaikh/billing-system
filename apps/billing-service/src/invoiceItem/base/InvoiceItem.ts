@@ -16,8 +16,8 @@ import {
   IsString,
   ValidateNested,
   IsOptional,
-  IsInt,
   IsNumber,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Invoice } from "../../invoice/base/Invoice";
@@ -52,14 +52,14 @@ class InvoiceItem {
 
   @ApiProperty({
     required: false,
-    type: String,
+    type: Number,
   })
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => Number, {
     nullable: true,
   })
-  lineTotal!: string | null;
+  lineTotal!: number | null;
 
   @ApiProperty({
     required: false,

@@ -15,10 +15,9 @@ import { StringFilter } from "../../util/StringFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { InvoiceWhereUniqueInput } from "../../invoice/base/InvoiceWhereUniqueInput";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { ProductWhereUniqueInput } from "../../product/base/ProductWhereUniqueInput";
 import { IntNullableFilter } from "../../util/IntNullableFilter";
-import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 
 @InputType()
 class InvoiceItemWhereInput {
@@ -47,14 +46,14 @@ class InvoiceItemWhereInput {
 
   @ApiProperty({
     required: false,
-    type: StringNullableFilter,
+    type: FloatNullableFilter,
   })
-  @Type(() => StringNullableFilter)
+  @Type(() => FloatNullableFilter)
   @IsOptional()
-  @Field(() => StringNullableFilter, {
+  @Field(() => FloatNullableFilter, {
     nullable: true,
   })
-  lineTotal?: StringNullableFilter;
+  lineTotal?: FloatNullableFilter;
 
   @ApiProperty({
     required: false,

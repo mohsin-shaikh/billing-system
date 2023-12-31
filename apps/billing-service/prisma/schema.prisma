@@ -57,7 +57,7 @@ model InvoiceItem {
   id          String   @id @default(cuid())
   invoiceId   Invoice? @relation(fields: [invoiceIdId], references: [id])
   invoiceIdId String?
-  lineTotal   String?
+  lineTotal   Float?
   productId   Product? @relation(fields: [productIdId], references: [id])
   productIdId String?
   quantity    Int?
@@ -66,7 +66,7 @@ model InvoiceItem {
 }
 
 enum EnumInvoiceStatus {
-  paid
-  unpaid
-  pending
+  Paid
+  Unpaid
+  Pending
 }

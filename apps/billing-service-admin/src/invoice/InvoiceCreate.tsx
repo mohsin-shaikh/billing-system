@@ -6,7 +6,7 @@ import {
   CreateProps,
   ReferenceInput,
   SelectInput,
-  DateTimeInput,
+  DateInput,
   ReferenceArrayInput,
   SelectArrayInput,
   TextInput,
@@ -26,8 +26,8 @@ export const InvoiceCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectInput optionText={CustomerTitle} />
         </ReferenceInput>
-        <DateTimeInput label="Due Date" source="dueDate" />
-        <DateTimeInput label="Invoice Date" source="invoiceDate" />
+        <DateInput label="Due Date" source="dueDate" />
+        <DateInput label="Invoice Date" source="invoiceDate" />
         <ReferenceArrayInput
           source="invoiceItems"
           reference="InvoiceItem"
@@ -40,9 +40,9 @@ export const InvoiceCreate = (props: CreateProps): React.ReactElement => {
           source="status"
           label="Status"
           choices={[
-            { label: "Paid", value: "paid" },
-            { label: "Unpaid", value: "unpaid" },
-            { label: "Pending", value: "pending" },
+            { label: "Paid", value: "Paid" },
+            { label: "Unpaid", value: "Unpaid" },
+            { label: "Pending", value: "Pending" },
           ]}
           optionText="label"
           allowEmpty
