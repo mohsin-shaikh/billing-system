@@ -1,0 +1,72 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Customer {
+  createdAt DateTime  @default(now())
+  email     String?
+  firstName String?
+  id        String    @id @default(cuid())
+  invoices  Invoice[]
+  lastName  String?
+  phone     String?
+  updatedAt DateTime  @updatedAt
+}
+
+model Product {
+  createdAt    DateTime      @default(now())
+  description  String?
+  id           String        @id @default(cuid())
+  invoiceItems InvoiceItem[]
+  name         String?
+  price        Float?
+  updatedAt    DateTime      @updatedAt
+}
+
+model Invoice {
+  createdAt    DateTime           @default(now())
+  customerId   Customer?          @relation(fields: [ID], references: [id])
+  ID           String?
+  dueDate      DateTime?
+  id           String             @id @default(cuid())
+  invoiceDate  DateTime?
+  invoiceItems InvoiceItem[]
+  status       EnumInvoiceStatus?
+  totalAmount  String?
+  updatedAt    DateTime           @updatedAt
+}
+
+model InvoiceItem {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  invoiceId Invoice? @relation(fields: [ID], references: [id])
+  ID        String?
+  lineTotal String?
+  productId Product? @relation(fields: [ID], references: [id])
+  ID        String?
+  quantity  Int?
+  unitPrice Float?
+  updatedAt DateTime @updatedAt
+}
+
+enum EnumInvoiceStatus {
+  paid
+  unpaid
+  pending
+}
