@@ -40,16 +40,17 @@ model Product {
 }
 
 model Invoice {
-  createdAt    DateTime           @default(now())
-  customerId   Customer?          @relation(fields: [customerIdId], references: [id])
-  customerIdId String?
-  dueDate      DateTime?
-  id           String             @id @default(cuid())
-  invoiceDate  DateTime?
-  invoiceItems InvoiceItem[]
-  status       EnumInvoiceStatus?
-  totalAmount  String?
-  updatedAt    DateTime           @updatedAt
+  createdAt     DateTime           @default(now())
+  customerId    Customer?          @relation(fields: [customerIdId], references: [id])
+  customerIdId  String?
+  dueDate       DateTime?
+  id            String             @id @default(cuid())
+  invoiceDate   DateTime?
+  invoiceItems  InvoiceItem[]
+  invoiceNumber String?
+  status        EnumInvoiceStatus?
+  totalAmount   String?
+  updatedAt     DateTime           @updatedAt
 }
 
 model InvoiceItem {

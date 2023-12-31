@@ -83,6 +83,17 @@ class Invoice {
 
   @ApiProperty({
     required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  invoiceNumber!: string | null;
+
+  @ApiProperty({
+    required: false,
     enum: EnumInvoiceStatus,
   })
   @IsEnum(EnumInvoiceStatus)

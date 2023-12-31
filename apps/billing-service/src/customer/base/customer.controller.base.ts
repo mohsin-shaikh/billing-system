@@ -232,6 +232,7 @@ export class CustomerControllerBase {
         dueDate: true,
         id: true,
         invoiceDate: true,
+        invoiceNumber: true,
         status: true,
         totalAmount: true,
         updatedAt: true,

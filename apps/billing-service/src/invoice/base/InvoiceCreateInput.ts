@@ -16,8 +16,8 @@ import {
   ValidateNested,
   IsOptional,
   IsDate,
-  IsEnum,
   IsString,
+  IsEnum,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { InvoiceItemCreateNestedManyWithoutInvoicesInput } from "./InvoiceItemCreateNestedManyWithoutInvoicesInput";
@@ -70,6 +70,17 @@ class InvoiceCreateInput {
     nullable: true,
   })
   invoiceItems?: InvoiceItemCreateNestedManyWithoutInvoicesInput;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  invoiceNumber?: string | null;
 
   @ApiProperty({
     required: false,

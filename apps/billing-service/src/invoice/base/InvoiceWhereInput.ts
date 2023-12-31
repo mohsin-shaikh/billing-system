@@ -17,8 +17,8 @@ import { Type } from "class-transformer";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { InvoiceItemListRelationFilter } from "../../invoiceItem/base/InvoiceItemListRelationFilter";
-import { EnumInvoiceStatus } from "./EnumInvoiceStatus";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { EnumInvoiceStatus } from "./EnumInvoiceStatus";
 
 @InputType()
 class InvoiceWhereInput {
@@ -78,6 +78,17 @@ class InvoiceWhereInput {
     nullable: true,
   })
   invoiceItems?: InvoiceItemListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  invoiceNumber?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

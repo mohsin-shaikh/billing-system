@@ -8,6 +8,7 @@ export type Invoice = {
   id: string;
   invoiceDate: Date | null;
   invoiceItems?: Array<InvoiceItem>;
+  invoiceNumber: string | null;
   status?: "Paid" | "Unpaid" | "Pending" | null;
   totalAmount: string | null;
   updatedAt: Date;

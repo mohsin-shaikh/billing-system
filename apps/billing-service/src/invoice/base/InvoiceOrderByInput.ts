@@ -83,6 +83,17 @@ class InvoiceOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  invoiceNumber?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   status?: SortOrder;
 
   @ApiProperty({

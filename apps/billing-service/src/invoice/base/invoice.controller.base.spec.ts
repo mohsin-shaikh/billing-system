@@ -22,6 +22,7 @@ const CREATE_INPUT = {
   dueDate: new Date(),
   id: "exampleId",
   invoiceDate: new Date(),
+  invoiceNumber: "exampleInvoiceNumber",
   totalAmount: "exampleTotalAmount",
   updatedAt: new Date(),
 };
@@ -30,6 +31,7 @@ const CREATE_RESULT = {
   dueDate: new Date(),
   id: "exampleId",
   invoiceDate: new Date(),
+  invoiceNumber: "exampleInvoiceNumber",
   totalAmount: "exampleTotalAmount",
   updatedAt: new Date(),
 };
@@ -39,6 +41,7 @@ const FIND_MANY_RESULT = [
     dueDate: new Date(),
     id: "exampleId",
     invoiceDate: new Date(),
+    invoiceNumber: "exampleInvoiceNumber",
     totalAmount: "exampleTotalAmount",
     updatedAt: new Date(),
   },
@@ -48,6 +51,7 @@ const FIND_ONE_RESULT = {
   dueDate: new Date(),
   id: "exampleId",
   invoiceDate: new Date(),
+  invoiceNumber: "exampleInvoiceNumber",
   totalAmount: "exampleTotalAmount",
   updatedAt: new Date(),
 };

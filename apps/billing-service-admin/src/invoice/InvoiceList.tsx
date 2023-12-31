@@ -31,6 +31,7 @@ export const InvoiceList = (props: ListProps): React.ReactElement => {
         <TextField label="Due Date" source="dueDate" />
         <TextField label="ID" source="id" />
         <TextField label="Invoice Date" source="invoiceDate" />
+        <TextField label="Invoice Number" source="invoiceNumber" />
         <TextField label="Status" source="status" />
         <TextField label="Total Amount" source="totalAmount" />
         <DateField source="updatedAt" label="Updated At" />

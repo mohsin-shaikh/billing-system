@@ -36,6 +36,7 @@ export const InvoiceEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={InvoiceItemTitle} />
         </ReferenceArrayInput>
+        <TextInput label="Invoice Number" source="invoiceNumber" />
         <SelectInput
           source="status"
           label="Status"
