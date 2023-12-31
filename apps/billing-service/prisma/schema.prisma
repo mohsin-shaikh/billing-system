@@ -41,8 +41,8 @@ model Product {
 
 model Invoice {
   createdAt    DateTime           @default(now())
-  customerId   Customer?          @relation(fields: [ID], references: [id])
-  ID           String?
+  customerId   Customer?          @relation(fields: [customerIdId], references: [id])
+  customerIdId String?
   dueDate      DateTime?
   id           String             @id @default(cuid())
   invoiceDate  DateTime?
@@ -53,16 +53,16 @@ model Invoice {
 }
 
 model InvoiceItem {
-  createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
-  invoiceId Invoice? @relation(fields: [ID], references: [id])
-  ID        String?
-  lineTotal String?
-  productId Product? @relation(fields: [ID], references: [id])
-  ID        String?
-  quantity  Int?
-  unitPrice Float?
-  updatedAt DateTime @updatedAt
+  createdAt   DateTime @default(now())
+  id          String   @id @default(cuid())
+  invoiceId   Invoice? @relation(fields: [invoiceIdId], references: [id])
+  invoiceIdId String?
+  lineTotal   String?
+  productId   Product? @relation(fields: [productIdId], references: [id])
+  productIdId String?
+  quantity    Int?
+  unitPrice   Float?
+  updatedAt   DateTime @updatedAt
 }
 
 enum EnumInvoiceStatus {

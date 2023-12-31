@@ -50,7 +50,7 @@ class InvoiceItemOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  ID?: SortOrder;
+  invoiceIdId?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -72,7 +72,7 @@ class InvoiceItemOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  ID?: SortOrder;
+  productIdId?: SortOrder;
 
   @ApiProperty({
     required: false,

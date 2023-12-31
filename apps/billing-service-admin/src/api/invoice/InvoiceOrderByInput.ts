@@ -2,7 +2,7 @@ import { SortOrder } from "../../util/SortOrder";
 
 export type InvoiceOrderByInput = {
   createdAt?: SortOrder;
-  ID?: SortOrder;
+  customerIdId?: SortOrder;
   dueDate?: SortOrder;
   id?: SortOrder;
   invoiceDate?: SortOrder;
